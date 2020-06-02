@@ -60,7 +60,7 @@ class Welcome extends REST_Controller
             $data = $this->request_key(getallheaders(),$this->username,$this->password,$this->key_client);
             $auth = json_decode($data);
             if(($auth->auth_server == $this->key_auth)&&($auth->auth_client == sha1($this->key_client)))
-        	   echo $this->get('id');
+        	   echo 'id : '.$this->get('id');
         }    
     }
     public function index_post()
@@ -71,8 +71,8 @@ class Welcome extends REST_Controller
             $auth = json_decode($data);
             if(($auth->auth_server == $this->key_auth)&&($auth->auth_client == sha1($this->key_client)))
             {
-            	echo $this->post('username');
-            	echo $this->post('password');  
+            	echo 'username : '.$this->post('username').'</br>';
+            	echo 'password : '.$this->post('password');  
             } 
         } 
         else
@@ -95,8 +95,8 @@ class Welcome extends REST_Controller
             $auth = json_decode($data);
             if(($auth->auth_server == $this->key_auth)&&($auth->auth_client == sha1($this->key_client)))
             {
-            	echo $this->put('username');
-                echo $this->put('password'); 
+            	echo 'username : '.$this->put('username').'</br>';
+                echo 'password : '.$this->put('password'); 
         	}
         }
     }
@@ -107,7 +107,7 @@ class Welcome extends REST_Controller
             $data = $this->request_key(getallheaders(),$this->username,$this->password,$this->key_client);
             $auth = json_decode($data);
             if(($auth->auth_server == $this->key_auth)&&($auth->auth_client == sha1($this->key_client)))       
-        	   echo $this->delete('id');
+        	   echo 'id : '.$this->delete('id');
     	}
     }
 }
