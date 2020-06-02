@@ -7,7 +7,7 @@ require APPPATH . 'libraries/Format.php';
 
 class Welcome extends REST_Controller 
 {
-    private $url_auth = "http://localhost/api/admin/auth/index";    
+    private $url_auth = "http://www.inspibook.com/wam/admin/auth/index";    
     private $key_auth = "f67d9380e2bdc74223c9f368d078e9be"; 
 
     private $username = "asdi";
