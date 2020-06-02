@@ -68,7 +68,7 @@ class Welcome extends REST_Controller
     {
         if ($this->uri->segment(3) == "auth")
         {            
-           	echo 'username : '.$this->post('username').'</br>';
+           	echo 'username : '.$this->post('username').',';
            	echo 'password : '.$this->post('password');           
         } 
         else
@@ -82,7 +82,7 @@ class Welcome extends REST_Controller
     {
         if ($this->uri->segment(3) == "auth")
         {            
-           	echo 'username : '.$this->put('username').'</br>';
+           	echo 'username : '.$this->put('username').',';
             echo 'password : '.$this->put('password');         
         }
     }
