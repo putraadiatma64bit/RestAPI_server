@@ -61,15 +61,15 @@ class Welcome extends REST_Controller
     {
         if ($this->uri->segment(3) == "auth")
         {            
-           echo $this->get('id');
+           echo 'id : '.$this->get('id');
         }    
     }
     public function index_post()
     {
         if ($this->uri->segment(3) == "auth")
         {            
-           	echo $this->post('username');
-           	echo $this->post('password');           
+           	echo 'username : '.$this->post('username').'</br>';
+           	echo 'password : '.$this->post('password');           
         } 
         else
         if ($this->uri->segment(3) == "raw")
@@ -82,15 +82,15 @@ class Welcome extends REST_Controller
     {
         if ($this->uri->segment(3) == "auth")
         {            
-           	echo $this->put('username');
-            echo $this->put('password');         
+           	echo 'username : '.$this->put('username').'</br>';
+            echo 'password : '.$this->put('password');         
         }
     }
     public function index_delete()
     {
         if ($this->uri->segment(3) == "auth")
         {                
-           echo $this->delete('id');
+           echo 'id : '.$this->delete('id');
     	}
     }
 }
