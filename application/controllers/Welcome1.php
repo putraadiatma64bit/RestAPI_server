@@ -71,7 +71,7 @@ class Welcome extends REST_Controller
             $auth = json_decode($data);
             if(($auth->auth_server == $this->key_auth)&&($auth->auth_client == sha1($this->key_client)))
             {
-            	echo 'username : '.$this->post('username').'</br>';
+            	echo 'username : '.$this->post('username').',';
             	echo 'password : '.$this->post('password');  
             } 
         } 
@@ -95,7 +95,7 @@ class Welcome extends REST_Controller
             $auth = json_decode($data);
             if(($auth->auth_server == $this->key_auth)&&($auth->auth_client == sha1($this->key_client)))
             {
-            	echo 'username : '.$this->put('username').'</br>';
+            	echo 'username : '.$this->put('username').',';
                 echo 'password : '.$this->put('password'); 
         	}
         }
